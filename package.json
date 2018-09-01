@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gscan": "gscan .",
+    "test": "npm run gscan"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/nehalist/haven/issues"
   },
-  "homepage": "https://github.com/nehalist/haven#readme"
+  "homepage": "https://github.com/nehalist/haven#readme",
+  "devDependencies": {
+    "gscan": "^2.2.0"
+  }
 }
