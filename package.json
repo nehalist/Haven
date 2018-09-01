@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "gscan": "gscan .",
+    "dev": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
     "test": "npm run gscan"
   },
   "repository": {
@@ -23,6 +25,8 @@
   },
   "homepage": "https://github.com/nehalist/haven#readme",
   "devDependencies": {
-    "gscan": "^2.2.0"
+    "gscan": "^2.2.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
   }
 }
