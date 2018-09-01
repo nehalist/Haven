@@ -1,0 +1,24 @@
+{
+  "name": "haven",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehalist/haven.git"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "blogging"
+  ],
+  "author": "Kevin Hirczy <kevin@nehalist.io> (https://nehalist.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nehalist/haven/issues"
+  },
+  "homepage": "https://github.com/nehalist/haven#readme"
+}
