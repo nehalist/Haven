@@ -44,5 +44,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4"
+  },
+  "config": {
+    "posts_per_page": 10
   }
 }
