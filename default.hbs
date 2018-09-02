@@ -8,12 +8,15 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link href="{{asset "dist/main.css"}}" type="text/css" rel="stylesheet">
+
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
     {{{body}}}
 
+    <script src="{{asset "dist/bundle.js"}}"></script>
     {{{block "scripts"}}}
 
     {{ghost_foot}}
