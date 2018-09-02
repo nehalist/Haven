@@ -1,6 +1,7 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './assets/js/index.js',
@@ -8,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'assets/dist'),
     filename: 'bundle.js'
   },
+  devtool: "source-map",
   module: {
     rules: [{
       test: /\.scss$/,
@@ -24,6 +26,9 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css"
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery'
     })
   ]
 };
