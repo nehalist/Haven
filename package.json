@@ -18,7 +18,11 @@
     "theme",
     "blogging"
   ],
-  "author": "Kevin Hirczy <kevin@nehalist.io> (https://nehalist.io)",
+  "author": {
+    "name": "Kevin Hirczy",
+    "email": "kevin@nehalist.io",
+    "url": "https://nehalist.io"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nehalist/haven/issues"
