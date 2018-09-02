@@ -1,1 +1,1 @@
-// Hello World
+require('../sass/main.scss');

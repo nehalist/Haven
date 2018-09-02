@@ -29,7 +29,12 @@
   },
   "homepage": "https://github.com/nehalist/haven#readme",
   "devDependencies": {
+    "css-loader": "^1.0.0",
     "gscan": "^2.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   }
