@@ -1,16 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <!--<li class="nav-item"><a class="nav-link"><i class="fa fa-search fa-lg"></i></a></li>-->
-                <!--<li class="nav-item"><a class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>-->
-                <!--<li class="nav-item"><a class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>-->
-            </ul>
-        </div>
-    </div>
-</nav>
+{{navigation}}
+
+<header class="header">
+    {{#if @blog.logo}}
+        <img class="header__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+    {{/if}}
+
+    <h1 class="header__title">
+        {{@blog.title}}
+    </h1>
+
+    <h2 class="header__description">
+        {{@blog.description}}
+    </h2>
+</header>

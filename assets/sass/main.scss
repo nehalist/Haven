@@ -1,6 +1,9 @@
-@import 'base';
-
 // Third-party
 @import '~bootstrap/scss/bootstrap';
 $fa-font-path: '../../node_modules/font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
+
+@import 'global';
+@import 'header';
+@import 'navigation';
+

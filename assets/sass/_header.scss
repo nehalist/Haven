@@ -1,0 +1,29 @@
+@import 'base';
+
+.header {
+  align-items: center;
+  background-color: $header-background-color;
+  color: $header-font-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $header-height;
+  padding-top: 56px;
+  margin-bottom: 56px;
+  text-align: center;
+
+  &__title {
+    font-weight: 800;
+  }
+
+  &__description {
+    font-size: 1.8em;
+    font-weight: 300;
+    opacity: .8;
+  }
+
+  &__logo {
+    max-height: 65px;
+    margin-bottom: 1.2em;
+  }
+}
