@@ -1,6 +1,7 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -29,6 +30,10 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery'
+    }),
+    new BrowserSyncPlugin({
+      proxy: 'localhost:2368',
+      open: false
     })
   ]
 };

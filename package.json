@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/nehalist/haven#readme",
   "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "gscan": "^2.2.0",
