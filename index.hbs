@@ -3,13 +3,16 @@
 {{> "header"}}
 
 <main class="content container">
-    <div class="col-9">
-        <div class="posts">
-            {{#foreach posts}}
-                {{> "post"}}
-            {{/foreach}}
+    <div class="row">
+        <div class="col">
+            <div class="posts">
+                {{#foreach posts}}
+                    {{> "post"}}
+                {{/foreach}}
+            </div>
         </div>
-    </div>
-    <div class="col-3">
+        <div class="col-3">
+            {{> "sidebar"}}
+        </div>
     </div>
 </main>

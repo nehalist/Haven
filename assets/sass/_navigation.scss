@@ -1,21 +1,27 @@
 .navbar {
+  font-size: .9em;
+
   .nav-link {
     transition: color 1s;
   }
 }
 
 .navigation {
+  background-color: rgba(52, 58, 64, 1);
+
   &__logo-container {
     height: 30px;
-    padding-top: 40px;
+    padding-top: 30px;
     overflow: hidden;
     transition: padding-top .3s;
+  }
 
-    .navbar-brand {
-      padding-top: 0;
-      padding-bottom: 0;
-      font-size: 1em;
-      line-height: normal;
-    }
+  .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    font-size: 1em;
+    line-height: normal;
+    text-align: center;
   }
 }

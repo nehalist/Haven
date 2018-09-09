@@ -10,7 +10,7 @@ $(() => {
     const scrollTop = $document.scrollTop();
     const alpha     = scrollTop / $header.height();
 
-    $navigation.css('background-color', `rgba(52, 58, 64, ${alpha}`);
+    $navigation.css('background-color', `rgba(52, 58, 64, ${alpha})`);
   };
 
   const logoSwitcher = () => {

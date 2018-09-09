@@ -1,0 +1,53 @@
+.sidebar {
+  .widget {
+    border-bottom: 1px #e5e5e5 solid;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  h4 {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .about {
+    border: 5px lighten(#cecece, 7%) solid;
+    border-radius: 115px;
+    max-width: 100%;
+    width: 150px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      a {
+        background-color: darken(#fff, 10%);
+        border-radius: 3px;
+        color: darken(#fff, 50%);
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 6px 6px 0;
+        padding: 6px 14px;
+        transition: all .5s;
+
+        &:hover {
+          background-color: #42566A;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

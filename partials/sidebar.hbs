@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <div class="widget">
+        <h4>Tags</h4>
+
+        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+            <ul class="tags">
+                {{#foreach tags}}
+                    <li><a href="{{url}}" class="tag">{{name}} ({{count.posts}})</a></li>
+                {{/foreach}}
+            </ul>
+        {{/get}}
+    </div>
+</div>
