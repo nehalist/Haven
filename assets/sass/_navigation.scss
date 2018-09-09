@@ -3,3 +3,19 @@
     transition: color 1s;
   }
 }
+
+.navigation {
+  &__logo-container {
+    height: 30px;
+    padding-top: 40px;
+    overflow: hidden;
+    transition: padding-top .3s;
+
+    .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 1em;
+      line-height: normal;
+    }
+  }
+}
