@@ -1,19 +1,22 @@
-.navbar {
-  font-size: .9em;
-
-  .nav-link {
-    transition: color 1s;
-  }
-}
+@import 'base';
 
 .navigation {
-  background-color: rgba(52, 58, 64, 1);
+  font-size: 1em;
+  background-color: $header-background-color;
 
   &__logo-container {
     height: 30px;
     padding-top: 30px;
     overflow: hidden;
     transition: padding-top .3s;
+  }
+
+  &--show-logo {
+    padding-top: 0 !important;
+  }
+
+  .nav-link {
+    transition: color 1s;
   }
 
   .navbar-brand {

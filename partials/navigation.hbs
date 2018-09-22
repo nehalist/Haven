@@ -11,7 +11,7 @@
             <ul class="nav navbar-nav flex-fill justify-content-center">
                 <li class="nav-item">
                     <a class="navbar-brand" href="#">
-                        <div class="navigation__logo-container">
+                        <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
                             <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30" />
                         </div>
                     </a>

@@ -2,13 +2,15 @@
 
 .header {
   align-items: center;
-  background-color: $header-background-color;
+  background-size: cover;
+  background: $header-background-color center;
   color: $header-font-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: $header-height;
   padding-top: 56px;
+  position: relative;
   margin-bottom: 56px;
   text-align: center;
 

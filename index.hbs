@@ -1,5 +1,7 @@
 {{!< default}}
 
+{{navigation}}
+
 {{> "header"}}
 
 <main class="content container">
@@ -7,12 +9,37 @@
         <div class="col">
             <div class="posts">
                 {{#foreach posts}}
-                    {{> "post"}}
+                    <div class="post">
+                        {{#if primary_tag}}
+                            <span class="post__primary-tag">
+                                {{primary_tag.name}}
+                            </span>
+                        {{/if}}
+
+                        <span class="post__date pull-right">{{date}}</span>
+
+                        <a class="post__title-link" href="{{url}}">
+                            <h2 class="post__title">{{title}}</h2>
+                        </a>
+
+                        <div class="clearfix">
+
+                            {{#if feature_image}}
+                                <a href="{{url}}">
+                                    <div class="post__feature-image" style="background-image: url({{feature_image}})"></div>
+                                </a>
+                            {{/if}}
+
+                            <div class="post__content">
+                                {{excerpt words="33"}}
+                            </div>
+                        </div>
+                    </div>
                 {{/foreach}}
             </div>
         </div>
-        <div class="col-3">
-            {{> "sidebar"}}
+        <div class="col-4">
+            {{> "sidebar" tag_list=true}}
         </div>
     </div>
 </main>

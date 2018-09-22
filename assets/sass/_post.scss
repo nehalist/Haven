@@ -1,0 +1,70 @@
+@import 'base';
+
+.post {
+  border-bottom: 1px solid #d4d4d4;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+
+  &__primary-tag {
+    color: lighten(#000, 45%);
+    font-size: .85em;
+    font-weight: bold;
+  }
+
+  &__date {
+    color: lighten(#000, 65%);
+    font-size: .85em;
+  }
+
+  &__title-link {
+    color: lighten(#000, 15%);
+    transition: all .5s;
+
+    &:hover {
+      color: #42566A;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-size: 2em;
+    font-weight: 700;
+    font-stretch: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__feature-image {
+    background-color: #F6F8FA;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    float: left;
+    height: 230px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    transition: all 1s;
+    width: 100%;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .post__content {
+    h2 {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin: .9em 0 .4em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin: .8em 0 .4em;
+    }
+
+    pre {
+      border-radius: 4px;
+    }
+  }
+}
