@@ -1,0 +1,15 @@
+@import 'base';
+
+$footer-text-color : rgba(255, 255, 255, 0.75);
+
+.footer {
+  background-color: $header-background-color;
+  color: $footer-text-color;
+  font-size: .85em;
+  height: 80px;
+  padding-top: 10px;
+
+  a {
+    color: $footer-text-color;
+  }
+}

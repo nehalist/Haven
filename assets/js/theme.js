@@ -13,4 +13,6 @@ $(() => {
     $document.on('scroll', logoSwitcher);
     logoSwitcher();
   }
+
+  //
 });

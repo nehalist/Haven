@@ -9,5 +9,16 @@
 }
 
 body {
+  color: lighten(#000, 30%);
   font-family: "Montserrat", "Arial", sans-serif !important;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
 }

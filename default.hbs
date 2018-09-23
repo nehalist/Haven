@@ -14,9 +14,21 @@
 </head>
 <body class="{{body_class}}">
 
-    {{{body}}}
+    <div class="site-wrapper">
+        {{{body}}}
+
+        <a href="#">
+        </a>
+
+        <footer class="footer">
+            <div class="container text-right">
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            </div>
+        </footer>
+    </div>
 
     <script src="{{asset "dist/bundle.js"}}"></script>
+
     {{{block "scripts"}}}
 
     {{ghost_foot}}
