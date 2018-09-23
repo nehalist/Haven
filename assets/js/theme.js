@@ -10,6 +10,7 @@ $(() => {
   };
 
   if ($logo.length) {
-    $document.on('scroll load', logoSwitcher);
+    $document.on('scroll', logoSwitcher);
+    logoSwitcher();
   }
 });
