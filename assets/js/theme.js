@@ -5,7 +5,7 @@ $(() => {
 
   const logoSwitcher = () => {
     const scrollTop = $document.scrollTop();
-    const padding = (scrollTop > $logo.offset().top + $logo.height()) ? 0 : '30px';
+    const padding = (scrollTop > $logo.offset().top) ? 0 : '30px';
     $logoContainer.css('padding-top', padding);
   };
 
