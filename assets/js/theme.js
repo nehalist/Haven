@@ -5,8 +5,15 @@ $(() => {
 
   const logoSwitcher = () => {
     const scrollTop = $document.scrollTop();
-    const padding = (scrollTop > $logo.offset().top) ? 0 : '30px';
+    const padding = (scrollTop > $logo.offset().top + $logo.height()) ? 0 : '30px';
     $logoContainer.css('padding-top', padding);
+  };
+
+  const adjustNavigationBgColor = () => {
+    const scrollTop = $document.scrollTop();
+    const alpha     = scrollTop / $('.header').height();
+
+    $('.navigation').css('background-color', `rgba(9, 10, 11, ${alpha})`);
   };
 
   if ($logo.length) {
@@ -14,5 +21,6 @@ $(() => {
     logoSwitcher();
   }
 
-  //
+  $document.on('scroll', adjustNavigationBgColor);
+  adjustNavigationBgColor();
 });

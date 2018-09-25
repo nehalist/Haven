@@ -2,7 +2,8 @@
 
 .navigation {
   font-size: 1em;
-  background-color: $header-background-color;
+  background: transparent;
+  line-height: 1.5em;
 
   &__logo-container {
     height: 30px;
@@ -26,5 +27,9 @@
     font-size: 1em;
     line-height: normal;
     text-align: center;
+  }
+
+  &.no-transparency {
+    background: $header-background-color;
   }
 }
