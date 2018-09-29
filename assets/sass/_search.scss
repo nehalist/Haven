@@ -1,0 +1,13 @@
+.toggle-search {
+  cursor: pointer;
+}
+
+.search {
+  background-color: #fff;
+  display: none;
+  height: calc(100vh - 56px);
+  left: 0;
+  position: absolute;
+  top: 56px;
+  width: 100%;
+}
