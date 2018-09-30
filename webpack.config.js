@@ -21,7 +21,7 @@ module.exports = {
       ]
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      use: ["file-loader"]
+      use: "file-loader"
     }]
   },
   plugins: [
@@ -29,7 +29,9 @@ module.exports = {
       filename: "[name].css"
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery'
+      $: 'jquery',
+      'jQuery': 'jquery',
+      'lunr': 'lunr'
     }),
     new BrowserSyncPlugin({
       proxy: 'localhost:2368',

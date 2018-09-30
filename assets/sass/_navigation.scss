@@ -32,4 +32,8 @@
   &.no-transparency {
     background: $header-background-color;
   }
+
+  &__toggle-search-button {
+    cursor: pointer;
+  }
 }

@@ -2985,6 +2985,7 @@
        * This example returns an object, but the module
        * can return a function as the exported value.
        */
+      window.lunr = lunr;
       return lunr
     }))
   })();
@@ -3142,6 +3143,7 @@
       return this.distance
     }
 
+    window.Levenshtein = Levenshtein;
     return Levenshtein
 
   }));
@@ -3312,7 +3314,7 @@
     init      : function( target , opts ){
       var that = this;
       Object.assign(this, opts);
-      console.log("ghostHunter: init");
+      // console.log("ghostHunter: init");
       if ( opts.onPageLoad ) {
         function miam () {
           that.loadAPI();
