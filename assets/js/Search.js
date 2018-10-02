@@ -2,18 +2,29 @@ export class Search {
   constructor() {
     this.$searchInput = $('#search-input');
     this.$searchResults = $('#search-results');
-    this.cache = false;
+    this.$searchModal = $('#searchModal');
+    this.$searchResultItemTemplate = $('#search-result-item');
+    this.results = [];
   }
 
   init() {
     this.loadPosts();
     this.search();
+
+    this.$searchModal.on('shown.bs.modal', () => this.$searchInput.focus());
+    this.$searchInput.keypress(e => {
+      if (e.which === 13 && this.results.length > 0) {
+        $('.search__result-link:first').click()
+      }
+    });
   }
 
   search() {
     this.$searchInput.on('keyup', $elem => {
-      const input = $elem.target.value;
-      this.setSearchResults(this.index.search(`${input.trim()}*`));
+      const input = $elem.target.value.trim();
+
+      this.results = (input !== "") ? this.index.search(`${input}*`) : [];
+      this.setSearchResults(this.results);
     });
   }
 
@@ -26,7 +37,14 @@ export class Search {
     results.forEach(result => {
       const post = this.posts.find(post => post.id === result.ref);
       if (post) {
-        this.$searchResults.append(`<li>${post.title}</li>`);
+        const template = this.$searchResultItemTemplate.html()
+          .replace("%title%", post.title)
+          .replace("%primary_tag%", post.primary_tag ? post.primary_tag.name : '')
+          .replace("%date%", (new Date(post.created_at)).toLocaleDateString())
+          .replace("%url%", post.url)
+        ;
+
+        this.$searchResults.append(`${template}`);
       }
     });
   }
@@ -46,11 +64,6 @@ export class Search {
 
         this.posts = data.posts;
 
-        const lastUpdatedAt = this.posts[0].updated_at;
-        if (lastUpdatedAt === localStorage.getItem('lastUpdatedAt') && this.cache) {
-          return;
-        }
-
         this.index = lunr(function () {
           this.field('title');
           this.field('plaintext');
@@ -62,7 +75,6 @@ export class Search {
             this.add(post);
           });
         });
-        localStorage.setItem('lastUpdatedAt', lastUpdatedAt);
       });
   }
 }
