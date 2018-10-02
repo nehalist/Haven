@@ -13,7 +13,7 @@ export class Search {
   search() {
     this.$searchInput.on('keyup', $elem => {
       const input = $elem.target.value;
-      this.setSearchResults(this.index.search(`${input}`));
+      this.setSearchResults(this.index.search(`${input.trim()}*`));
     });
   }
 
@@ -21,8 +21,6 @@ export class Search {
     if (!results instanceof Array) {
       return;
     }
-
-    console.log(results);
 
     this.$searchResults.children('li').remove();
     results.forEach(result => {
@@ -55,7 +53,10 @@ export class Search {
 
         this.index = lunr(function () {
           this.field('title');
-          // this.field('plaintext');
+          this.field('plaintext');
+
+          this.pipeline.remove(lunr.stemmer);
+          this.searchPipeline.remove(lunr.stemmer);
 
           data.posts.forEach(post => {
             this.add(post);
