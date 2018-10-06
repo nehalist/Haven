@@ -17,11 +17,7 @@
     <div class="site-wrapper">
         {{{body}}}
 
-        <footer class="footer">
-            <div class="container text-right">
-                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            </div>
-        </footer>
+        {{> "footer"}}
     </div>
 
     {{> "search"}}

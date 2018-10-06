@@ -6,10 +6,20 @@ $footer-text-color : rgba(255, 255, 255, 0.75);
   background-color: $header-background-color;
   color: $footer-text-color;
   font-size: .85em;
+  line-height: 1.4em;
+  margin-top: 50px;
   height: 80px;
   padding-top: 10px;
 
   a {
     color: $footer-text-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .themeby {
+    font-size: .9em;
   }
 }
