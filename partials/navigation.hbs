@@ -27,8 +27,12 @@
             <ul class="nav navbar-nav flex-fill w-100 justify-content-end">
                 <li class="nav-item"><a class="nav-link navigation__toggle-search-button" data-toggle="modal"
                                         data-target="#searchModal"><i class="fa fa-search fa-lg"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                {{#if @blog.facebook}}
+                    <li class="nav-item"><a href="{{facebook_url @blog.facebook}}" class="nav-link" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+                {{/if}}
+                {{#if @blog.twitter}}
+                    <li class="nav-item"><a href="{{twitter_url @blog.twitter}}" class="nav-link" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
+                {{/if}}
             </ul>
         </div>
     </div>
