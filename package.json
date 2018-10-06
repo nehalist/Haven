@@ -7,8 +7,9 @@
     "gscan": "gscan .",
     "dev": "webpack --watch --mode=development",
     "build": "webpack --mode=production",
-    "test": "npm run gscan",
-    "sass-lint": "sass-lint assets/sass/*.scss -v -q"
+    "test": "npm run gscan && npm run sass-lint && npm run eslint",
+    "sass-lint": "sass-lint assets/sass/*.scss -v -q",
+    "eslint": "eslint assets/js/**"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
     "file-loader": "^2.0.0",
     "gscan": "^2.2.0",
     "mini-css-extract-plugin": "^0.4.2",

@@ -1,4 +1,6 @@
-<header class="header {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}" id="header">
+<header
+    class="header {{#if @blog.cover_image}}"
+    style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     {{#if @blog.logo}}
         <img class="header__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
     {{/if}}

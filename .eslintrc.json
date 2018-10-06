@@ -1,0 +1,15 @@
+{
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "env": {
+    "jquery": true
+  },
+  "globals": {
+    "lunr": true,
+    "ghost": true,
+    "require": true,
+    "document": true
+  }
+}

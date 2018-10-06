@@ -30,7 +30,7 @@ export class Search {
   }
 
   setSearchResults(results) {
-    if (!results instanceof Array) {
+    if (!(results instanceof Array)) {
       return;
     }
 
@@ -59,7 +59,7 @@ export class Search {
     });
     $.ajax(url)
       .done(data => {
-        if (!data.hasOwnProperty('posts') || !data.posts instanceof Array || typeof data.posts === 'undefined') {
+        if (!data.hasOwnProperty('posts') || !(data.posts instanceof Array) || typeof data.posts === 'undefined') {
           return;
         }
 
