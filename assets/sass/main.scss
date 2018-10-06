@@ -1,7 +1,20 @@
 @import 'base';
 
 // Third-party
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/media';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/close';
 $fa-font-path: '../../node_modules/font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
