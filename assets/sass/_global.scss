@@ -14,6 +14,16 @@ body {
   line-height: 34px;
 }
 
+a {
+  color: lighten(#000, 15%);
+  transition: all .5s;
+
+  &:hover {
+    color: #42566A;
+    text-decoration: none;
+  }
+}
+
 .site-wrapper {
   display: flex;
   flex-direction: column;
@@ -22,4 +32,29 @@ body {
 
 .content {
   flex-grow: 1;
+}
+
+.kg-width-wide,
+.kg-width-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }

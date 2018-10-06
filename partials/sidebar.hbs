@@ -4,7 +4,7 @@
             <h4 class="sidebar__widget-title">Subscribe</h4>
             Stay up to date by getting the latest posts delivered right to your inbox.
 
-            <input type="text" class="form-control">
+            {{subscribe_form}}
         </div>
     {{/if}}
 
@@ -25,22 +25,20 @@
     {{/if}}
 
     {{#if related_posts}}
-        {{#get "posts" limit="5" filter="id:-{{post_id}}+tag:[{{primary_tag.slug}}]"}}
-            {{#if posts.length}}
-                <div class="sidebar__widget">
-                    <h4 class="sidebar__widget-title">Related posts</h4>
-
-                    <ul class="list-group">
-                        {{#foreach posts}}
-                            <li class="list-group-item"><a href="{{url}}">{{title}}</a></li>
-                        {{/foreach}}
-                    </ul>
-                </div>
-            {{/if}}
+        {{#if primary_tag}}
+            {{#get "posts" limit="5" filter="id:-{{post_id}}+tag:[{{primary_tag.slug}}]"}}
+                {{#if posts.length}}
+                    {{> "sidebar-post-list" widget_title="Related posts"}}
+                {{else}}
+                    {{#get "posts" limit="5"}}
+                        {{> "sidebar-post-list" widget_title="Latest posts"}}
+                    {{/get}}
+                {{/if}}
+            {{/get}}
         {{else}}
-            <div class="sidebar__widget">
-                <h4 class="sidebar__widget-title">Latest posts</h4>
-            </div>
-        {{/get}}
+            {{#get "posts" limit="5"}}
+                {{> "sidebar-post-list" widget_title="Latest posts"}}
+            {{/get}}
+        {{/if}}
     {{/if}}
 </div>

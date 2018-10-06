@@ -1,0 +1,17 @@
+<div class="sidebar__widget">
+    <h4 class="sidebar__widget-title">{{widget_title}}</h4>
+    <ul class="list-group sidebar__link-list">
+        {{#foreach posts}}
+            <li class="list-group-item sidebar__link-list-item">
+                <a href="{{url}}" class="sidebar__link-list-item-link">
+                    {{#if feature_image}}
+                        <div class="sidebar__link-list-item-image"
+                             style="background-image: url({{feature_image}})"></div>
+                    {{/if}}
+                    <span class="text-muted sidebar__link-list-item-date">{{date}}</span>
+                    {{title}}
+                </a>
+            </li>
+        {{/foreach}}
+    </ul>
+</div>

@@ -1,6 +1,8 @@
 @import 'base';
 
 .sidebar {
+  font-size: .9em;
+  line-height: 1.4em;
   padding-left: 25px;
   transition: top 1s;
 
@@ -17,7 +19,6 @@
   &__widget-title {
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 20px;
     text-transform: uppercase;
   }
 
@@ -27,7 +28,7 @@
     line-height: 18px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0;
   }
 
   &__tag-list-link {
@@ -47,5 +48,37 @@
       color: #fff;
       text-decoration: none;
     }
+  }
+
+  &__link-list {
+    border: 0;
+  }
+
+  &__link-list-item {
+    border: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  &__link-list-item-date {
+    font-size: .8em;
+    display: block;
+  }
+
+  &__link-list-item-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    float: left;
+    height: 45px;
+    margin-right: 10px;
+    width: 45px;
+  }
+
+  // Ridiculous.
+  &__link-list-item-link {
+    display: block;
+    min-height: 45px;
+    line-height: 1em;
   }
 }

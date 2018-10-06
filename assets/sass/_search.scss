@@ -41,13 +41,6 @@
   }
 
   &__result-link {
-    color: lighten(#000, 15%);
     display: block;
-    transition: all .5s;
-
-    &:hover {
-      color: #42566A;
-      text-decoration: none;
-    }
   }
 }
