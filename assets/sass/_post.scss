@@ -108,4 +108,13 @@
   &:last-child {
     border-bottom: 0;
   }
+
+  &__read-more {
+    margin-top: 20px;
+  }
+
+  &__read-more-button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

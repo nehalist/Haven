@@ -4,21 +4,29 @@
             <ul class="nav navbar-nav flex-fill w-100 flex-nowrap">
                 {{#foreach navigation}}
                     <li class="nav-item {{#if current}}active{{/if}}">
-                        <a class="nav-link nav-{{slug}}" href="{{url absolute="true"}}">{{label}} {{#if current}}<span class="sr-only">(current)</span>{{/if}}</a>
+                        <a class="nav-link nav-{{slug}}" href="{{url absolute="true"}}">{{label}} {{#if current}}
+                            <span class="sr-only">(current)</span>{{/if}}</a>
                     </li>
                 {{/foreach}}
             </ul>
             <ul class="nav navbar-nav flex-fill justify-content-center">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
-                            <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30" />
-                        </div>
+                    <a class="navbar-brand" href="{{@blog.url}}">
+                        {{#if @blog.logo}}
+                            <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
+                                <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30"/>
+                            </div>
+                        {{else}}
+                            <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
+                                <span class="navigation__logo navigation__logo-text navbar-text">{{@blog.title}}</span>
+                            </div>
+                        {{/if}}
                     </a>
                 </li>
             </ul>
             <ul class="nav navbar-nav flex-fill w-100 justify-content-end">
-                <li class="nav-item"><a class="nav-link navigation__toggle-search-button" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search fa-lg"></i></a></li>
+                <li class="nav-item"><a class="nav-link navigation__toggle-search-button" data-toggle="modal"
+                                        data-target="#searchModal"><i class="fa fa-search fa-lg"></i></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
             </ul>

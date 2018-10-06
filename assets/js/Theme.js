@@ -4,13 +4,14 @@ export class Theme {
     this.$navigation = $('.navigation');
     this.$logoContainer = $('.navigation__logo-container');
     this.$logo = $('.header__logo');
+    this.$blogTitle = $('.header__title');
     this.$sidebar = $('.sidebar');
     this.initialSidebarWidth = $('.sidebar-container').width();
     this.initialSidebarOffset = this.$sidebar.offset().top;
   }
 
   init() {
-    if (this.$logo.length) {
+    if (this.$logo.length || this.$blogTitle.length) {
       this.$document.on("scroll", () => this.logoSwitcher());
       this.logoSwitcher();
     }
@@ -24,7 +25,8 @@ export class Theme {
 
   logoSwitcher() {
     const scrollTop = this.$document.scrollTop();
-    const padding = (scrollTop > this.$logo.offset().top + this.$logo.height()) ? 0 : '30px';
+    const $ref = this.$logo.length ? this.$logo : this.$blogTitle;
+    const padding = (scrollTop > $ref.offset().top + $ref.height()) ? 0 : '30px';
     this.$logoContainer.css('padding-top', padding);
   }
 
