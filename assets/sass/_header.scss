@@ -2,16 +2,16 @@
 
 .header {
   align-items: center;
-  background-size: cover;
   background: $header-background-color center;
+  background-size: cover;
   color: $header-font-color;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: $header-height;
+  justify-content: center;
+  margin-bottom: 26px;
   padding-top: 56px;
   position: relative;
-  margin-bottom: 26px;
   text-align: center;
 
   &__title {
@@ -26,7 +26,7 @@
   }
 
   &__logo {
-    max-height: 65px;
     margin-bottom: 1.2em;
+    max-height: 65px;
   }
 }

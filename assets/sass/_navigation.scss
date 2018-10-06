@@ -1,17 +1,17 @@
 @import 'base';
 
 .navigation {
-  font-size: 1em;
-  line-height: 1.5em;
   background: $header-background-color;
+  line-height: 1.5em;
 
   &__logo-container {
     height: 30px;
-    padding-top: 30px;
     overflow: hidden;
+    padding-top: 30px;
     transition: padding-top .3s;
   }
 
+  // sass-lint:disable no-important
   &--show-logo {
     padding-top: 0 !important;
   }
@@ -21,17 +21,17 @@
   }
 
   .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: 0;
     font-size: 1em;
     font-weight: 600;
     line-height: normal;
+    margin-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: center;
   }
 
   .navbar-text {
-    color: #fff;
+    color: $white;
   }
 
   &.no-transparency {

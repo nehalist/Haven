@@ -1,12 +1,35 @@
-$primary-theme-color: #42566A;
+$primary-theme-color: #42566a;
+
+// Defaults
+$white: #fff;
+$black: #000;
+$ultra-light-gray: #d4d4d4;
+$light-gray: lighten($black, 65%);
+$gray: lighten($black, 45%);
+$box-shadow-color: lighten($primary-theme-color, 25%);
+
+// Bootstrap adjustments
+$theme-colors: (
+  'primary': $primary-theme-color
+);
+$body-color: lighten($black, 30%);
+$link-color: lighten($black, 15%);
 
 // Header
 $header-height: 480px;
 $header-background-color: #090a0b;
-$header-font-color: #fff;
+$header-font-color: $white;
 
-// Bootstrap adjustments
+// Post
+$feature-image-background-color: #f6f8fa;
+$pre-background-color: #f5f2f0;
+$code-color: #3c484e;
 
-$theme-colors: (
-  "primary": $primary-theme-color
-);
+// Sidebar
+$widget-border-color: #e5e5e5;
+$tag-link-background-color: darken($white, 10%);
+$tag-link-color: darken($white, 50%);
+
+// Footer
+$footer-height: 80px;
+$footer-text-color: rgba(255, 255, 255, .75);

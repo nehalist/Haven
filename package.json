@@ -7,7 +7,8 @@
     "gscan": "gscan .",
     "dev": "webpack --watch --mode=development",
     "build": "webpack --mode=production",
-    "test": "npm run gscan"
+    "test": "npm run gscan",
+    "sass-lint": "sass-lint assets/sass/*.scss -v -q"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "gscan": "^2.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.1",

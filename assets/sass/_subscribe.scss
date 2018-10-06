@@ -7,21 +7,21 @@
   &__input {
     border: 0;
     border-radius: 0;
-    box-shadow: inset 0 -1px 0 #7d96ae;
+    box-shadow: inset 0 -1px 0 $box-shadow-color;
     font-size: 12px;
-    outline: none;
-    padding: 6px 12px 6px 12px;
     margin-right: 5px;
+    outline: none;
+    padding: 6px 12px;
     transition: box-shadow .3s;
 
     &:focus {
-      box-shadow: inset 0 -2px 0 #7d96ae;
+      box-shadow: inset 0 -2px 0 $box-shadow-color;
     }
   }
 
   &__submit-button {
     border-radius: 3px;
     font-weight: 600;
-    transition: all .5s;
+    transition: background-color .5s;
   }
 }

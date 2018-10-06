@@ -1,48 +1,42 @@
 @import 'base';
 
 .post {
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 1px solid $ultra-light-gray;
   margin-bottom: 50px;
   padding-bottom: 50px;
 
   &__primary-tag {
-    color: lighten(#000, 45%);
+    color: $gray;
     font-size: .85em;
     font-weight: bold;
   }
 
   &__date {
-    color: lighten(#000, 65%);
+    color: $light-gray;
     font-size: .85em;
   }
 
   &__title-link {
-    color: lighten(#000, 15%);
-    transition: all .5s;
-
-    &:hover {
-      color: #42566A;
-      text-decoration: none;
-    }
+    transition: color .5s;
   }
 
   &__title {
     font-size: 2em;
-    font-weight: 700;
     font-stretch: 100%;
+    font-weight: 700;
     margin-bottom: 20px;
   }
 
   &__feature-image {
-    background-color: #F6F8FA;
-    background-size: cover;
+    background-color: $feature-image-background-color;
     background-position: center;
+    background-size: cover;
     border-radius: 4px;
     float: left;
     height: 230px;
     margin-bottom: 25px;
     margin-top: 5px;
-    transition: all 1s;
+    transition: opacity 1s;
     width: 100%;
 
     &:hover {
@@ -52,10 +46,10 @@
 
   .post__content {
     a {
-      color: #000;
-      box-shadow: inset 0 -1px 0 lighten($primary-theme-color, 25%);
+      box-shadow: inset 0 -1px 0 $box-shadow-color;
+      color: $black;
       text-decoration: none;
-      transition: all .5s;
+      transition: color .5s;
 
       &:hover {
         color: lighten($primary-theme-color, 25%);
@@ -75,15 +69,15 @@
     }
 
     pre {
-      background-color: #f5f2f0;
+      background-color: $pre-background-color;
       border-radius: 4px;
       padding: 1em;
     }
 
     :not(pre) > code {
-      background-color: #f5f2f0;
+      background-color: $pre-background-color;
       border-radius: 3px;
-      color: #3c484e;
+      color: $code-color;
       font-size: .8em;
       line-height: 1em;
       padding: 0 5px 2px;
@@ -101,7 +95,7 @@
     }
 
     hr {
-      margin: 2.5em 0 2.5em 0;
+      margin: 2.5em 0;
     }
   }
 
