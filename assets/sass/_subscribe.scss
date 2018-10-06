@@ -8,6 +8,7 @@
     border: 0;
     border-radius: 0;
     box-shadow: inset 0 -1px 0 #7d96ae;
+    font-size: 12px;
     outline: none;
     padding: 6px 12px 6px 12px;
     margin-right: 5px;
@@ -19,19 +20,9 @@
   }
 
   &__submit-button {
-    background-color: darken(#fff, 10%);
-    border: 0;
     border-radius: 3px;
-    color: darken(#fff, 50%);
-    cursor: pointer;
     font-size: 12px;
     font-weight: 600;
     transition: all .5s;
-
-    &:hover {
-      background-color: $primary-theme-color;
-      color: #fff;
-      text-decoration: none;
-    }
   }
 }

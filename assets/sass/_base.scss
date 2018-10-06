@@ -4,3 +4,9 @@ $primary-theme-color: #42566A;
 $header-height: 480px;
 $header-background-color: #090a0b;
 $header-font-color: #fff;
+
+// Bootstrap adjustments
+
+$theme-colors: (
+  "primary": $primary-theme-color
+);
