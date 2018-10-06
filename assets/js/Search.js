@@ -14,7 +14,8 @@ export class Search {
     this.$searchModal.on('shown.bs.modal', () => this.$searchInput.focus());
     this.$searchInput.keypress(e => {
       if (e.which === 13 && this.results.length > 0) {
-        $('.search__result-link:first').click()
+        const $result = this.$searchResults.find('li').first();
+        $result.find('a')[0].click();
       }
     });
   }
