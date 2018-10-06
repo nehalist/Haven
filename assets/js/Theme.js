@@ -4,6 +4,9 @@ export class Theme {
     this.$navigation = $('.navigation');
     this.$logoContainer = $('.navigation__logo-container');
     this.$logo = $('.header__logo');
+    this.$sidebar = $('.sidebar');
+    this.initialSidebarWidth = $('.sidebar-container').width();
+    this.initialSidebarOffset = this.$sidebar.offset().top;
   }
 
   init() {
@@ -14,6 +17,9 @@ export class Theme {
 
     this.$document.on("scroll", () => this.adjustNavigationBgAlpha());
     this.adjustNavigationBgAlpha();
+
+    this.$document.on("scroll", () => this.affixSidebar());
+    this.affixSidebar();
   }
 
   logoSwitcher() {
@@ -26,5 +32,23 @@ export class Theme {
     const scrollTop = this.$document.scrollTop();
     const alpha = scrollTop / $('.header').height();
     this.$navigation.css('background-color', `rgba(9, 10, 11, ${alpha})`);
+  }
+
+  affixSidebar() {
+    if (this.$sidebar.height() >= this.$document.height()) {
+      return;
+    }
+
+    const scrollTop = this.$document.scrollTop();
+    const offsetTop = this.$navigation.height() + 40;
+
+    if ((scrollTop + offsetTop) < this.initialSidebarOffset) {
+      this.$sidebar.css('position', 'initial');
+      return;
+    }
+
+    this.$sidebar.css('width', this.initialSidebarWidth);
+    this.$sidebar.css('position', 'fixed');
+    this.$sidebar.css('top', offsetTop);
   }
 }
