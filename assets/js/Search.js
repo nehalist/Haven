@@ -66,7 +66,7 @@ export class Search {
         this.posts = data.posts;
 
         this.index = lunr(function () {
-          this.field('title');
+          this.field('title', { boost: 10 });
           this.field('plaintext');
 
           this.pipeline.remove(lunr.stemmer);
