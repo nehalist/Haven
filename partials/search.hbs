@@ -20,10 +20,12 @@
 
 <script id="search-result-item" type="text/template">
     <li class="search__result">
-        <div class="search__result-meta">
-            <span class="search__result-tag">%primary_tag%</span>
-            <span class="search__result-date pull-right">%date%</span>
-        </div>
-        <a class="search__result-link" href="%url%">%title%</a>
+        <a class="search__result-link" href="%url%">
+            <div class="search__result-meta">
+                <span class="search__result-tag">%primary_tag%</span>
+                <span class="search__result-date pull-right">%date%</span>
+            </div>
+            %title%
+        </a>
     </li>
 </script>
