@@ -61,6 +61,6 @@ export class Theme {
   }
 
   isMobile() {
-    return !this.$navbarToggler.is(':visible');
+    return this.$navbarToggler.is(':visible');
   }
 }
