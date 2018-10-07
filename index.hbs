@@ -4,48 +4,23 @@
 
 {{> "header"}}
 
-<main class="content container">
+<div class="container">
     <div class="row">
-        <div class="col">
-            <div class="posts">
-                {{#foreach posts}}
-                    <div class="post">
-                        {{#if primary_tag}}
-                            <span class="post__primary-tag">
-                                {{primary_tag.name}}
-                            </span>
-                        {{/if}}
+        <div class="col-md-8 col-sm-12">
+            <main id="content">
+                <div class="posts">
+                    {{#foreach posts}}
+                        {{> "post-preview"}}
+                    {{/foreach}}
+                </div>
 
-                        <span class="post__date pull-right">{{date}}</span>
-
-                        <a class="post__title-link" href="{{url}}">
-                            <h2 class="post__title">{{title}}</h2>
-                        </a>
-
-                        <div class="clearfix">
-
-                            {{#if feature_image}}
-                                <a href="{{url}}">
-                                    <div class="post__feature-image" style="background-image: url({{feature_image}})"></div>
-                                </a>
-                            {{/if}}
-
-                            <div class="post__content">
-                                {{excerpt words="33"}}
-                            </div>
-
-                            <div class="post__read-more">
-                                <a href="{{url}}" class="btn btn-primary post__read-more-button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                {{/foreach}}
-            </div>
-
-            {{pagination}}
+                {{pagination}}
+            </main>
         </div>
         <div class="col-4 sidebar-container">
-            {{> "sidebar" tag_list=true}}
+            <aside id="sidebar">
+                {{> "sidebar" tag_list=true}}
+            </aside>
         </div>
     </div>
-</main>
+</div>
