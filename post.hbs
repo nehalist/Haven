@@ -35,8 +35,30 @@
                             {{content}}
                         </section>
 
-                        <section class="post__author">
+                        <section class="post__authors-container {{#has author="count:>1"}}post__authors-container--multiple{{/has}}">
+                            {{#foreach authors}}
+                                <a class="post__author-link" href="{{url}}" rel="author">
+                                    <div class="post__author">
+                                        {{#if profile_image}}
+                                            <img class="post__author-profile-image" src="{{profile_image}}" alt="{{name}}">
+                                        {{else}}
+                                            <div class="post__author-no-profile-image"></div>
+                                        {{/if}}
 
+                                        <div class="post__author-content">
+                                            <h4 class="post__author-name">{{name}}</h4>
+                                            {{#if bio}}
+                                                <p class="post__author-bio">
+                                                    {{bio}}
+                                                </p>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                </a>
+                            {{/foreach}}
+                        </section>
+
+                        <section class="post__comments">
                         </section>
                     </article>
                 {{/post}}

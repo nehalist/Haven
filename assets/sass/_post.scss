@@ -52,7 +52,7 @@
     }
   }
 
-  .post__content {
+  &__content {
     a {
       box-shadow: inset 0 -1px 0 $box-shadow-color;
       color: $black;
@@ -93,6 +93,7 @@
 
     img {
       max-width: 100%;
+      border-radius: 3px;
     }
 
     blockquote {
@@ -105,6 +106,76 @@
     hr {
       margin: 2.5em 0;
     }
+  }
+
+  &__authors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 70px 0;
+    width: 100%;
+  }
+
+  &__authors-container--multiple {
+    .post__author-link {
+      flex: 1;
+    }
+  }
+
+  &__author {
+    align-items: center;
+    display: flex;
+    font-size: .9em;
+  }
+
+  &__author-link {
+    align-items: center;
+    margin-bottom: 15px;
+    min-width: 250px;
+
+    &:hover {
+      color: initial;
+    }
+  }
+
+  &__author-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__author-profile-image {
+    background-color: $ultra-light-gray;
+    border-radius: 100%;
+    height: 60px;
+    margin-right: 15px;
+    width: 60px;
+    object-fit: cover;
+  }
+
+  &__author-no-profile-image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+
+    &:before {
+      font-family: FontAwesome, sans-serif;
+      content: "\f2be";
+      color: $ultra-light-gray;
+      position: absolute;
+      top: 13px;
+      font-size: 60px;
+    }
+  }
+
+  &__author-bio {
+    margin: 0;
+    line-height: 1.4em;
+  }
+
+  &__comments {
+    margin-top: 50px;
   }
 
   &:last-child {
