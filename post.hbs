@@ -2,33 +2,52 @@
 
 {{navigation}}
 
-{{#post}}
-    <main class="content container" style="margin-top: 100px;">
-        <div class="row">
-            <div class="col-8">
-                <div class="post">
-                    {{#if primary_tag}}
-                        <span class="post__primary-tag">
-                            {{primary_tag.name}}
-                        </span>
-                    {{/if}}
+<div class="container no-header">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <main id="content">
+                {{#post}}
+                    <article class="post clearfix {{post_class}}">
+                        <header class="post__header">
+                            <div class="post__meta row">
+                                <div class="col-6">
+                                    {{#if primary_tag}}
+                                        <span class="post__primary-tag">
+                                            {{primary_tag.name}}
+                                        </span>
+                                    {{/if}}
+                                </div>
+                                <div class="col-6 text-right">
+                                    <time class="post__date" datetime="{{date}}">{{date}}</time>
+                                </div>
+                            </div>
 
-                    <span class="post__date pull-right">{{date}}</span>
+                            <a class="post__title-link" href="{{url}}">
+                                <h2 class="post__title">{{title}}</h2>
+                            </a>
+                        </header>
 
-                    <h2 class="post__title">{{title}}</h2>
+                        {{#if feature_image}}
+                            <a href="{{url}}">
+                                <figure class="post__feature-image" style="background-image: url({{feature_image}})"></figure>
+                            </a>
+                        {{/if}}
 
-                    {{#if feature_image}}
-                        <div class="post__feature-image" style="background-image: url({{feature_image}})"></div>
-                    {{/if}}
+                        <section class="post__content">
+                            {{content}}
+                        </section>
 
-                    <div class="post__content">
-                        {{content}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 sidebar-container">
-                {{> "sidebar" related_posts=true post_id=id primary_tag=primary_tag}}
-            </div>
+                        <section class="post__author">
+
+                        </section>
+                    </article>
+                {{/post}}
+            </main>
         </div>
-    </main>
-{{/post}}
+        <div class="col-4 sidebar-container">
+            <aside id="sidebar">
+                {{> "sidebar" related_posts=true post_id=id primary_tag=primary_tag}}
+            </aside>
+        </div>
+    </div>
+</div>
