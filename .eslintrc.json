@@ -10,6 +10,7 @@
     "lunr": true,
     "ghost": true,
     "require": true,
-    "document": true
+    "document": true,
+    "window": true
   }
 }

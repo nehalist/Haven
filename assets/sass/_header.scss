@@ -29,4 +29,9 @@
     margin-bottom: 1.2em;
     max-height: 65px;
   }
+
+  &--half {
+    background-color: lighten($header-background-color, 25%);
+    height: $header-height / 2;
+  }
 }
