@@ -44,6 +44,14 @@
     }
   }
 
+  &__feature-image--no-hover {
+    opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .post__content {
     a {
       box-shadow: inset 0 -1px 0 $box-shadow-color;
