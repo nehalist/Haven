@@ -91,8 +91,26 @@
       padding: 0 5px 2px;
     }
 
-    img {
-      max-width: 100%;
+    .lightbox {
+      box-shadow: none;
+
+      img {
+        opacity: 1;
+        transition: opacity 1s;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    & > p {
+      img {
+        border-radius: $general-border-radius;
+        display: block;
+        margin: 30px auto;
+        max-width: 100%;
+      }
     }
 
     blockquote {
@@ -125,6 +143,12 @@
     align-items: center;
     display: flex;
     font-size: .9em;
+
+    &:hover {
+      .post__author-profile-image {
+        opacity: .8;
+      }
+    }
   }
 
   &__author-link {
@@ -148,6 +172,8 @@
     border-radius: 100%;
     height: 60px;
     margin-right: 15px;
+    opacity: 1;
+    transition: opacity 1s;
     width: 60px;
   }
 

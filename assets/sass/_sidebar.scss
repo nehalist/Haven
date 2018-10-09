@@ -58,6 +58,12 @@
     border: 0;
     margin-bottom: 20px;
     padding: 0;
+
+    &:hover {
+      .sidebar__link-list-item-image {
+        opacity: .8;
+      }
+    }
   }
 
   &__link-list-item-date {
@@ -73,6 +79,8 @@
     float: left;
     height: 45px;
     margin-right: 10px;
+    opacity: 1;
+    transition: opacity 1s;
     width: 45px;
   }
 

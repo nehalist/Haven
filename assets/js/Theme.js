@@ -16,7 +16,8 @@ export class Theme {
     options = Object.assign({
       logoSwitcher: true,
       navbarBgAlpha: true,
-      affixSidebar: true
+      affixSidebar: true,
+      featherlight: true
     }, options);
 
     if (options.logoSwitcher) {
@@ -34,6 +35,10 @@ export class Theme {
     if (options.affixSidebar) {
       this.$window.on("scroll resize", () => this.affixSidebar());
       this.affixSidebar();
+    }
+
+    if (options.featherlight) {
+      this.enableFeatherlight();
     }
 
     this.setGalleryRatio();
@@ -82,6 +87,19 @@ export class Theme {
       const height = $image.height();
       const ratio = width / height;
       $container.css('flex', `${ratio} 1 0%`);
+    });
+  }
+
+  enableFeatherlight() {
+    $(".kg-gallery-image img, .post__content img").each(function() {
+      var $this = $(this);
+      var src = $this.attr('src');
+      var a = $('<a/>').attr('href', src).addClass('lightbox');
+      $this.wrap(a);
+    });
+
+    $("a.lightbox").featherlight({
+      closeOnClick: 'anywhere'
     });
   }
 
