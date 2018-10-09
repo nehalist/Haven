@@ -31,6 +31,9 @@
   },
   "homepage": "https://github.com/nehalist/haven#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
@@ -39,9 +42,11 @@
     "gscan": "^2.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   },
