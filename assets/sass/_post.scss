@@ -27,21 +27,44 @@
     margin-bottom: 20px;
   }
 
+  &__content-container {
+    @if $compact-preview-layout {
+      display: flex;
+    }
+
+    &:hover {
+      .post__feature-image {
+        opacity: .8;
+      }
+    }
+  }
+
   &__feature-image {
     background-color: $feature-image-background-color;
     background-position: center;
     background-size: cover;
     border-radius: $general-border-radius;
-    float: left;
-    height: 230px;
-    margin-bottom: 25px;
-    margin-top: 5px;
     transition: opacity 1s;
-    width: 100%;
+
+    @if $compact-preview-layout {
+      height: 135px;
+      margin-right: 20px;
+      width: 135px;
+    } @else {
+      height: 250px;
+      margin: 25px 0 15px;
+      width: 100%;
+    }
 
     &:hover {
       opacity: .8;
     }
+  }
+
+  &__feature-image--full-width {
+    height: 250px;
+    margin: 25px 0 15px;
+    width: 100%;
   }
 
   &__feature-image--no-hover {
