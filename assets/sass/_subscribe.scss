@@ -20,7 +20,7 @@
   }
 
   &__submit-button {
-    border-radius: 3px;
+    border-radius: $general-border-radius;
     font-weight: 600;
     transition: background-color .5s;
   }

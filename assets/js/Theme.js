@@ -12,17 +12,31 @@ export class Theme {
     this.initialSidebarOffset = this.$sidebar.offset().top;
   }
 
-  init() {
-    if (this.$logo.length || this.$blogTitle.length) {
-      this.$window.on("scroll resize", () => this.logoSwitcher());
-      this.logoSwitcher();
+  init(options) {
+    options = Object.assign({
+      logoSwitcher: true,
+      navbarBgAlpha: true,
+      affixSidebar: true
+    }, options);
+
+    if (options.logoSwitcher) {
+      if (this.$logo.length || this.$blogTitle.length) {
+        this.$window.on("scroll resize", () => this.logoSwitcher());
+        this.logoSwitcher();
+      }
     }
 
-    this.$window.on("scroll resize", () => this.adjustNavigationBgAlpha());
-    this.adjustNavigationBgAlpha();
+    if (options.navbarBgAlpha) {
+      this.$window.on("scroll resize", () => this.adjustNavigationBgAlpha());
+      this.adjustNavigationBgAlpha();
+    }
 
-    this.$window.on("scroll resize", () => this.affixSidebar());
-    this.affixSidebar();
+    if (options.affixSidebar) {
+      this.$window.on("scroll resize", () => this.affixSidebar());
+      this.affixSidebar();
+    }
+
+    this.setGalleryRatio();
   }
 
   logoSwitcher() {
@@ -58,6 +72,17 @@ export class Theme {
     this.$sidebar.css('width', this.initialSidebarWidth);
     this.$sidebar.css('position', 'fixed');
     this.$sidebar.css('top', offsetTop);
+  }
+
+  setGalleryRatio() {
+    $('.kg-gallery-image img').each(function() {
+      const $image = $(this);
+      const $container = $(this).closest('.kg-gallery-image');
+      const width = $image.width();
+      const height = $image.height();
+      const ratio = width / height;
+      $container.css('flex', `${ratio} 1 0%`);
+    });
   }
 
   isMobile() {

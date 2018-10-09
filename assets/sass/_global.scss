@@ -50,8 +50,10 @@ a {
 }
 
 .kg-gallery-container {
+  border-radius: $general-border-radius;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -68,4 +70,9 @@ a {
     margin: 0;
     width: 100%;
   }
+}
+
+.kg-image {
+  border-radius: $general-border-radius;
+  max-width: 100%;
 }
