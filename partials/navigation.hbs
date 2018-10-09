@@ -1,8 +1,8 @@
 <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top {{^is "home"}}no-transparency{{/is}}">
     <!--<a class="navbar-brand d-block d-xs-none" href="#">nehalist.io</a>-->
     <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigation"-->
-            <!--aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">-->
-        <!--<span class="navbar-toggler-icon"></span>-->
+    <!--aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
     <!--</button>-->
 
     <div class="container">
@@ -10,8 +10,9 @@
             <ul class="nav navbar-nav flex-fill w-100 flex-nowrap">
                 {{#foreach navigation}}
                     <li class="nav-item {{#if current}}active{{/if}}">
-                        <a class="nav-link nav-{{slug}}" href="{{url absolute="true"}}">{{label}} {{#if current}}
-                            <span class="sr-only">(current)</span>{{/if}}</a>
+                        <a class="nav-link nav-{{slug}}" href="{{url absolute="true"}}">
+                            {{label}}
+                        </a>
                     </li>
                 {{/foreach}}
             </ul>

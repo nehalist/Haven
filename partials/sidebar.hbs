@@ -1,8 +1,8 @@
 <div class="sidebar">
     {{#if @labs.subscribers}}
         <div class="sidebar__widget">
-            <h4 class="sidebar__widget-title">Subscribe</h4>
-            Stay up to date by getting the latest posts delivered right to your inbox.
+            <h4 class="sidebar__widget-title">{{t "Subscribe"}}</h4>
+            {{t "Stay up to date by getting the latest posts delivered right to your inbox."}}
 
             {{subscribe_form}}
         </div>
@@ -10,7 +10,7 @@
 
     {{#if tag_list}}
         <div class="sidebar__widget">
-            <h4 class="sidebar__widget-title">Tags</h4>
+            <h4 class="sidebar__widget-title">{{t "Tags"}}</h4>
 
             {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
                 <ul class="sidebar__tag-list">

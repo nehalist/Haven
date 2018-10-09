@@ -2,13 +2,13 @@
     <div class="row">
         {{#if prev}}
             <div class="col">
-                <a class="btn btn-secondary" href="{{page_url prev}}">&laquo; Newer Posts</a>
+                <a class="btn btn-secondary" href="{{page_url prev}}">&laquo; {{t "Newer Posts"}}</a>
             </div>
         {{/if}}
 
         {{#if next}}
             <div class="col text-right">
-                <a class="btn btn-secondary" href="{{page_url next}}">Older Posts &raquo;</a>
+                <a class="btn btn-secondary" href="{{page_url next}}">{{t "Older Posts"}} &raquo;</a>
             </div>
         {{/if}}
     </div>
