@@ -3,9 +3,9 @@
         <div class="post__meta row">
             <div class="col-6">
                 {{#if primary_tag}}
-                    <span class="post__primary-tag">
-                        {{primary_tag.name}}
-                    </span>
+                    {{#primary_tag}}
+                        <a class="post__primary-tag" href="{{url}}">{{name}}</a>
+                    {{/primary_tag}}
                 {{/if}}
             </div>
             <div class="col-6 text-right">
