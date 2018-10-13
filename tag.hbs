@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{navigation}}
+
+{{#tag}}
+    <header
+        class="header header--for-author {{#if feature_image}}"
+        style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+
+        <h1 class="header__title header__title--center mb-0">
+            <small>{{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}</small>
+            {{name}}
+        </h1>
+
+        <div class="header__tag-description">
+            {{description}}
+        </div>
+    </header>
+{{/tag}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <main id="content">
+                <div class="posts">
+                    {{#foreach posts}}
+                        {{> "post-preview"}}
+                    {{/foreach}}
+                </div>
+
+                {{pagination}}
+            </main>
+        </div>
+        <div class="col-4 sidebar-container">
+            <aside id="sidebar">
+                {{> "sidebar" tag_list=true}}
+            </aside>
+        </div>
+    </div>
+</div>

@@ -27,6 +27,10 @@
     }
   }
 
+  &__title--center {
+    text-align: center;
+  }
+
   &__description {
     font-size: 1.5em;
     font-weight: 300;
@@ -75,6 +79,10 @@
     &:hover {
       color: $white;
     }
+  }
+
+  &__tag-description {
+    color: $transparent-white;
   }
 
   .bull {
