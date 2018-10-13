@@ -1,0 +1,46 @@
+@import 'base';
+
+.error {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex: 1 auto;
+
+  &__emoji {
+    align-self: center;
+    color: $gray;
+    margin-right: 50px;
+    line-height: 1em;
+  }
+
+  &__info {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    line-height: 1em;
+    flex-wrap: wrap;
+  }
+
+  &__code {
+    font-size: 2em;
+    font-weight: bold;
+    flex-basis: 100%;
+
+    small {
+      display: block;
+      font-size: .5em;
+      opacity: .8;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: block;
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    flex-direction: column;
+  }
+}

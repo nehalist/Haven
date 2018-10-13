@@ -1,0 +1,16 @@
+{{!< default}}
+
+{{navigation}}
+
+<div class="error content container no-header">
+    <span class="error__emoji">
+        <img src="{{ asset "images/deadlink.png" }}">
+    </span>
+    <div class="error__info">
+        <h1 class="error__code mb-1">
+            <small>{{code}} - {{message}}</small>
+            {{t "Whoops, you found a dead link."}}
+        </h1>
+        <a href="{{@blog.url}}">{{t "Oh jeez! Take me back to a safer place!"}}</a>
+    </div>
+</div>
