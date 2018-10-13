@@ -7,6 +7,9 @@ require('featherlight/release/featherlight.min');
 import {Theme} from "./Theme";
 import {Search} from "./Search";
 
+import Prism from 'prismjs';
+Prism.highlightAll();
+
 (new Theme()).init({
   logoSwitcher: true,
   navbarBgAlpha: true,
