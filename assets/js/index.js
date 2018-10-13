@@ -11,7 +11,7 @@ import Prism from 'prismjs';
 Prism.highlightAll();
 
 (new Theme()).init({
-  logoSwitcher: true,
+  logoSwapper: true,
   navbarBgAlpha: true,
   affixSidebar: true,
   featherlight: true

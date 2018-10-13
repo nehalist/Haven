@@ -14,16 +14,16 @@ export class Theme {
 
   init(options) {
     options = Object.assign({
-      logoSwitcher: true,
+      logoSwapper: true,
       navbarBgAlpha: true,
       affixSidebar: true,
       featherlight: true
     }, options);
 
-    if (options.logoSwitcher) {
+    if (options.logoSwapper) {
       if (this.$logo.length || this.$blogTitle.length) {
-        this.$window.on("scroll resize", () => this.logoSwitcher());
-        this.logoSwitcher();
+        this.$window.on("scroll resize", () => this.logoSwapper());
+        this.logoSwapper();
       }
     }
 
@@ -44,7 +44,7 @@ export class Theme {
     this.setGalleryRatio();
   }
 
-  logoSwitcher() {
+  logoSwapper() {
     if (this.isMobile()) {
       return;
     }
