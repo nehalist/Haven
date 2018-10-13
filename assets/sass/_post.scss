@@ -99,12 +99,6 @@
       margin: .8em 0 .4em;
     }
 
-    pre {
-      background-color: $pre-background-color;
-      border-radius: $general-border-radius;
-      padding: 1em;
-    }
-
     :not(pre) > code {
       background-color: $pre-background-color;
       border-radius: $general-border-radius;
