@@ -16,12 +16,21 @@
 
   &__title {
     font-weight: 800;
+    font-size: 2em;
+
+    small {
+      color: rgba(255, 255, 255, .75);
+      display: block;
+      font-size: .45em;
+      font-style: italic;
+      width: 100%;
+    }
   }
 
   &__description {
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     opacity: .7;
   }
 
@@ -30,8 +39,49 @@
     max-height: 65px;
   }
 
-  &--half {
-    background-color: lighten($header-background-color, 25%);
-    height: $header-height / 2;
+  &__author-info-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__author-info {
+    flex-wrap: wrap;
+  }
+
+  &__author-bio {
+    font-size: 1.3em;
+    opacity: .7;
+  }
+
+  &__author-image {
+    border-radius: 100%;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, .2);
+    margin-right: 35px;
+    width: 80px;
+    height: 80px;
+  }
+
+  &__author-meta {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  &__author-link {
+    color: rgba(255, 255, 255, .8);
+    margin: 0 10px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .bull {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  &--for-author {
+    text-align: left;
   }
 }
