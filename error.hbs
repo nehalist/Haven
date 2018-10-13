@@ -3,18 +3,16 @@
 {{navigation}}
 
 <div class="error content container no-header">
-    <main id="error">
-        <div class="row">
-            <div class="col-md-4 col-sm-12 my-auto text-center">
-                <img src="{{ asset "images/deadlink.png" }}" class="error__image">
-            </div>
-            <div class="col my-auto text-sm-center text-md-left">
-                <h1 class="error__code mb-1">
-                    <small>{{code}} - {{message}}</small>
-                    {{t "Whoops, you found a dead link."}}
-                </h1>
-                <a href="{{@blog.url}}">{{t "Oh jeez! Take me back to a safer place!"}}</a>
-            </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12 my-auto text-center">
+            <img src="{{ asset "images/deadlink.png" }}" class="error__image">
         </div>
-    </main>
+        <div class="col my-auto text-sm-center text-md-left">
+            <h1 class="error__code mb-1">
+                <small>{{code}} - {{message}}</small>
+                {{t "Whoops, you found a dead link."}}
+            </h1>
+            <a href="{{@blog.url}}">{{t "Oh jeez! Take me back to a safer place!"}}</a>
+        </div>
+    </div>
 </div>
