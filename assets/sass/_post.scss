@@ -142,6 +142,11 @@
     }
   }
 
+  &__meta {
+    line-height: 1em;
+    margin-bottom: .25em;
+  }
+
   &__authors-container {
     display: flex;
     flex-wrap: wrap;
