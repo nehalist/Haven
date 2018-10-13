@@ -15,11 +15,11 @@
   text-align: center;
 
   &__title {
-    font-weight: 800;
     font-size: 2em;
+    font-weight: 800;
 
     small {
-      color: rgba(255, 255, 255, .75);
+      color: $transparent-white;
       display: block;
       font-size: .45em;
       font-style: italic;
@@ -40,8 +40,8 @@
   }
 
   &__author-info-wrapper {
-    display: flex;
     align-content: center;
+    display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -57,18 +57,19 @@
 
   &__author-image {
     border-radius: 100%;
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, .2);
+    box-shadow: 0 0 0 5px $ultra-transparent-white;
+    height: 80px;
     margin-right: 35px;
     width: 80px;
-    height: 80px;
   }
 
   &__author-meta {
-    color: rgba(255, 255, 255, .8);
+    color: $transparent-white;
+    line-height: 1.2em;
   }
 
   &__author-link {
-    color: rgba(255, 255, 255, .8);
+    color: $transparent-white;
     margin: 0 10px;
 
     &:hover {

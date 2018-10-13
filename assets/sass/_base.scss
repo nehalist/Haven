@@ -8,6 +8,8 @@ $light-gray: lighten($black, 65%);
 $gray: lighten($black, 45%);
 $box-shadow-color: lighten($primary-theme-color, 25%);
 $general-border-radius: 4px;
+$transparent-white: rgba(255, 255, 255, .75);
+$ultra-transparent-white: rgba(255, 255, 255, .2);
 
 // Bootstrap adjustments
 $theme-colors: (
