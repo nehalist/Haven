@@ -62,7 +62,7 @@ export class Theme {
   }
 
   affixSidebar() {
-    if (this.$sidebar.height() >= this.$document.height()) {
+    if (this.$sidebar.height() >= this.$window.height()) {
       return;
     }
 
