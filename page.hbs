@@ -1,0 +1,45 @@
+{{!< default}}
+
+{{navigation}}
+
+<div class="container no-header">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <main id="content">
+                {{#post}}
+                    <article class="post clearfix {{post_class}}">
+                        <header class="post__header">
+                            <div class="post__meta row">
+                                <div class="col-6">
+                                    {{#if primary_tag}}
+                                        {{#primary_tag}}
+                                            <a class="post__primary-tag" href="{{url}}">{{name}}</a>
+                                        {{/primary_tag}}
+                                    {{/if}}
+                                </div>
+                                <div class="col-6 text-right">
+                                    <time class="post__date" datetime="{{date}}">{{date}}</time>
+                                </div>
+                            </div>
+
+                            <h2 class="post__title">{{title}}</h2>
+                        </header>
+
+                        {{#if feature_image}}
+                            <figure class="post__feature-image post__feature-image--no-hover post__feature-image--full-width" style="background-image: url({{feature_image}})"></figure>
+                        {{/if}}
+
+                        <section class="post__content">
+                            {{content}}
+                        </section>
+                    </article>
+                {{/post}}
+            </main>
+        </div>
+        <div class="col-4 sidebar-container">
+            <aside id="sidebar">
+                {{> "sidebar" related_posts=true post_id=id primary_tag=primary_tag}}
+            </aside>
+        </div>
+    </div>
+</div>

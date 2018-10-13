@@ -125,7 +125,7 @@ Sure. Just make sure [tests](#testing) are succeeding.
 
 3. **How to add comments?**
 
-Proper templates (like `post.hbs` or `page.hbs`) do provide a comment placeholder `section` which is commented out
+The `post.hbs` template provides a comment placeholder `section` which is commented out
 by default (section id is `comments`). Use this placeholder 
 and [paste your comment code there](https://www.ghostforbeginners.com/how-to-enable-comments-on-a-ghost-blog/).
 
