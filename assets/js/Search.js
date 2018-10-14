@@ -8,6 +8,11 @@ export class Search {
   }
 
   init() {
+    if (!window.ghost) {
+      $('.navigation__toggle-search-button').hide();
+      return;
+    }
+
     this.loadPosts();
     this.search();
 

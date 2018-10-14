@@ -8,8 +8,11 @@ export class Theme {
     this.$logo = $('.header__logo');
     this.$blogTitle = $('.header__title');
     this.$sidebar = $('.sidebar');
-    this.initialSidebarWidth = $('.sidebar-container').width();
-    this.initialSidebarOffset = this.$sidebar.offset().top;
+
+    if (this.$sidebar.length) {
+      this.initialSidebarWidth = $('.sidebar-container').width();
+      this.initialSidebarOffset = this.$sidebar.offset().top;
+    }
   }
 
   init(options) {
@@ -67,7 +70,7 @@ export class Theme {
     }
 
     const scrollTop = this.$document.scrollTop();
-    const offsetTop = this.$navigation.height() + 40;
+    const offsetTop = this.$navigation.height() + 37;
 
     if ((scrollTop + offsetTop) < this.initialSidebarOffset || this.isMobile()) {
       this.$sidebar.css('position', 'initial');
@@ -80,7 +83,7 @@ export class Theme {
   }
 
   setGalleryRatio() {
-    $('.kg-gallery-image img').each(function() {
+    $('.kg-gallery-image img').each(function () {
       const $image = $(this);
       const $container = $(this).closest('.kg-gallery-image');
       const width = $image.width();
@@ -91,7 +94,7 @@ export class Theme {
   }
 
   enableFeatherlight() {
-    $(".kg-gallery-image img, .post__content img").each(function() {
+    $(".kg-gallery-image img, .post__content img").each(function () {
       var $this = $(this);
       var src = $this.attr('src');
       var a = $('<a/>').attr('href', src).addClass('lightbox');
