@@ -23,23 +23,23 @@
                         {{location}}
                         <span class="bull">&bull;</span>
                     {{/if}}
-
                     {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
                     <span class="bull">&bull;</span>
-
                     {{#if website}}
-                        <a class="header__author-link" href="{{website}}" target="_blank" rel="noopener"><i class="fa fa-home"></i></a>
+                        <a class="header__author-link" href="{{website}}" target="_blank" rel="noopener"><i
+                            class="fa fa-home"></i></a>
                     {{/if}}
-
                     {{#if twitter}}
-                        <a class="header__author-link" href="{{twitter_url}}" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                        <a class="header__author-link" href="{{twitter_url}}" target="_blank" rel="noopener"><i
+                            class="fa fa-twitter"></i></a>
                     {{/if}}
-
                     {{#if facebook}}
-                        <a class="header__author-link" href="{{facebook_url}}" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                        <a class="header__author-link" href="{{facebook_url}}" target="_blank" rel="noopener"><i
+                            class="fa fa-facebook"></i></a>
                     {{/if}}
-
-                    <a class="header__author-link" href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a>
+                    <a class="header__author-link"
+                       href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank"
+                       rel="noopener"><i class="fa fa-rss"></i></a>
                 </div>
             </div>
         </div>
