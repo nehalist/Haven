@@ -9,8 +9,8 @@
     background: transparent;
     border: 0;
     border-radius: 0;
-    flex-grow: 1;
     box-shadow: inset 0 -1px 0 $box-shadow-color;
+    flex-grow: 1;
     font-size: 12px;
     margin-right: 5px;
     outline: none;
@@ -30,20 +30,20 @@
 }
 
 .subscribe-page {
-  display: flex;
   align-content: center;
-  justify-content: center;
+  display: flex;
   flex: 1 auto;
+  justify-content: center;
 
   &__form {
-    background-color: darken($white, 5%);
+    background-color: $box-bg-color;
     border-radius: $general-border-radius;
     padding: 25px;
     text-align: center;
   }
 
   &__error {
-    color: #ff0000;
+    color: $error-color;
     font-size: .8em;
     font-weight: bold;
     margin: 0;

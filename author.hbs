@@ -10,6 +10,9 @@
         <div class="header__author-info-wrapper">
             {{#if profile_image}}
                 <img class="header__author-image" src="{{profile_image}}" alt="{{name}}">
+            {{else}}
+                <img class="post__author-profile-image" src="{{asset "images/unknown.png"}}"
+                     alt="{{name}}">
             {{/if}}
 
             <div class="header__author-info">

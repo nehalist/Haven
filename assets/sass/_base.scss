@@ -10,6 +10,10 @@ $box-shadow-color: lighten($primary-theme-color, 25%);
 $general-border-radius: 4px;
 $transparent-white: rgba(255, 255, 255, .75);
 $ultra-transparent-white: rgba(255, 255, 255, .2);
+$box-bg-color: darken($white, 5%);
+$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+$error-color: #f00;
 
 // Bootstrap adjustments
 $theme-colors: (

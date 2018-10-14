@@ -26,34 +26,75 @@
                         </header>
 
                         {{#if feature_image}}
-                            <figure class="post__feature-image post__feature-image--no-hover post__feature-image--full-width" style="background-image: url({{feature_image}})"></figure>
+                            <figure
+                                class="post__feature-image post__feature-image--no-hover post__feature-image--full-width"
+                                style="background-image: url({{feature_image}})"></figure>
                         {{/if}}
 
                         <section class="post__content">
                             {{content}}
                         </section>
 
-                        <section class="post__authors-container {{#has author="count:>1"}}post__authors-container--multiple{{/has}}">
-                            {{#foreach authors}}
-                                <a class="post__author-link" href="{{url}}" rel="author">
-                                    <div class="post__author">
-                                        {{#if profile_image}}
-                                            <img class="post__author-profile-image" src="{{profile_image}}" alt="{{name}}">
-                                        {{else}}
-                                            <div class="post__author-no-profile-image"></div>
-                                        {{/if}}
-
-                                        <div class="post__author-content">
-                                            <h4 class="post__author-name">{{name}}</h4>
-                                            {{#if bio}}
-                                                <p class="post__author-bio">
-                                                    {{bio}}
-                                                </p>
-                                            {{/if}}
+                        <section class="post__author-container">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-6">
+                                    {{#has author="count:>1"}}
+                                        <div class="post__authors">
+                                            {{#foreach authors}}
+                                                <a class="post__author-avatar-only" href="{{url}}" rel="author">
+                                                    {{#if profile_image}}
+                                                        <img class="post__author-profile-image" src="{{profile_image}}"
+                                                             alt="{{name}}">
+                                                    {{else}}
+                                                        <img class="post__author-profile-image" src="{{asset "images/unknown.png"}}"
+                                                             alt="{{name}}">
+                                                    {{/if}}
+                                                </a>
+                                            {{/foreach}}
                                         </div>
-                                    </div>
-                                </a>
-                            {{/foreach}}
+                                    {{else}}
+                                        {{#primary_author}}
+                                            <div class="post__author">
+                                                <a class="post__author-link d-flex" href="{{url}}" rel="author">
+                                                    {{#if profile_image}}
+                                                        <img class="post__author-profile-image" src="{{profile_image}}"
+                                                             alt="{{name}}">
+                                                    {{else}}
+                                                        <img class="post__author-profile-image" src="{{asset "images/unknown.png"}}"
+                                                             alt="{{name}}">
+                                                    {{/if}}
+
+                                                    <div class="post__author-content">
+                                                        <h4 class="post__author-name">{{name}}</h4>
+                                                        {{#if bio}}
+                                                            <p class="post__author-bio">
+                                                                {{bio}}
+                                                            </p>
+                                                        {{/if}}
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        {{/primary_author}}
+                                    {{/has}}
+                                </div>
+                                <div class="col post__share-links text-right">
+                                    <span class="post__share-title">{{t "Share this post on"}}</span>
+                                    <a class="post__share-link post__share-link--twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                    <a class="post__share-link post_share-link--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </section>
 
                         {{!
