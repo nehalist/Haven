@@ -4,7 +4,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/nehalist/Haven/total.svg)](https://github.com/nehalist/Haven/releases)
 [![GitHub](https://img.shields.io/github/license/nehalist/Haven.svg)](https://github.com/nehalist/Haven/blob/master/LICENSE)
 
-A Ghost theme. ***Work in Progress***
+A Ghost theme. [Demo!](//haven.nehalist.io)
 
 ![haven](screenshot.png)
 
@@ -24,12 +24,12 @@ A Ghost theme. ***Work in Progress***
 
 ### From Releases
 
-1. Unzip the theme directory to your `content/themes` directory in your Ghost install dir
+1. Unzip the theme directory to `<ghost directory>/content/themes/haven`
 2. Done.
 
 ### From GitHub
 
-1. Clone the repository to your `content/themes` directory in your Ghost install dir
+1. Clone the repository to `<ghost directory>/content/themes/haven`
 2. Run `npm i` to install dependencies
 3. Build the theme by running `npm run build`
 4. Done.
@@ -37,6 +37,9 @@ A Ghost theme. ***Work in Progress***
 ## Customization
 
 > **Important**: Every change within the the `assets` directory requires you to [rebuild](#building) the theme.
+
+Keep in mind that customization is only available if you do have access to the source files, meaning that you need to 
+clone the repository instead of just downloading the released theme.
 
 ### General theme options
 
@@ -95,7 +98,7 @@ Prism.highlightAll();
 
 ### Locale development
 
-1. Clone the repository to your `content/themes` directory
+1. Clone the repository to `<ghost directory>/content/themes/haven`
 2. Install npm dependencies with `npm i`
 3. Run `npm run dev` to start webpack with the `--watch` flag
 4. SASS and JS will be automatically compiled after changes
@@ -125,11 +128,11 @@ It's a client-side custom implementation based on [lunr.js](//lunrjs.com/) (see 
 
 Use the [GitHub issue tracker](//github.com/nehalist/Haven/issues).
 
-3. **I've done a thing, do you accept Pull requests?**
+4. **I've done a thing, do you accept Pull requests?**
 
 Sure. Just make sure [tests](#testing) are succeeding.
 
-3. **How to add comments?**
+5. **How to add comments?**
 
 The `post.hbs` template provides a comment placeholder `section` which is commented out
 by default (section id is `comments`). Use this placeholder 
