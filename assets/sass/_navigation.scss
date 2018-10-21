@@ -7,9 +7,11 @@
 
   &__logo-container {
     height: 30px;
+    max-width: 150px;
     overflow: hidden;
     padding-top: 30px;
     transition: padding-top .3s;
+    width: 150px;
 
     // sass-lint:disable no-important
     &--with-line-height {
