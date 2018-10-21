@@ -93,12 +93,12 @@
   }
 
   &__social-links {
+    display: inline;
+
     @include media-breakpoint-down(sm) {
       display: block;
       margin-top: 5px;
     }
-
-    display: inline;
   }
 
   &__tag-description {
