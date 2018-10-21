@@ -11,3 +11,16 @@ install:
 
 script:
   - npm test
+
+before_deploy:
+  - npm run release
+
+deploy:
+  provider: releases
+  api_key:
+    secure: yquHn2/wcB3yoNTiLgNOC9bdMJl2ECiJ9z+SA/U/utyxjwB5i78iPUZYzMlVa2exni+n0nJ3yLRjCXTbCSpbjYCRG86Mfm/divJGDgKGirn510a5soo8TKQNurO3lffb/rHEHX4Y0uT43iGZw5/CXuCEGSaEm2Yslr8X7qNY6RGzmqBSFZK+xIbpy+8I8Zl4Ln/n8Wvfei452k77UGyQ2Bx2f9jx0mmihOUBdahoOrDT+AnaxqyOVlIFYO3pAOc1lNqoBZYTfYEqMhLKtTrtlvthf5g/74nUvruT2Okr/GGJArBwr4DSXPKw0mVKQz2sfnU+Bf1P7PNtfROenzSkKHYZHJFhpPiq7vsvAlP4IONwgjIXDZl4KOuHnI+20vIEfDT2eCm1LmSXh9POUqY8YY3TQKE3WiAxvUi+afsYkcAXNwo5JpOWdW/OhvRsuouTymiNRD0te3oz4dJ/IidqwYQZO6nhXIHvQIy2JUYLq4LL/yK89OfWHbnDsGKELVC0n2LMX2Og7wMM3GsYkYJUQZWR/na98hb6ZeEchUe3vRSobstUroCCxcuhkI57F2gh9ogmtnoRP7Lh71LBhRMWLDkylSGxT1yMeKnTIY2S/nvz1EdG1hmQIUZxfJmOFd+3yAfHVxTW8pQ+JQFaqAojbrfi5SZNVCco/COyPHgRopg=
+  skip_cleanup: true
+  file_glob: true
+  file: haven-*.zip
+  on:
+    tags: true

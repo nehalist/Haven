@@ -9,7 +9,9 @@
     "build": "webpack --mode=production",
     "test": "npm run gscan && npm run sass-lint && npm run eslint",
     "sass-lint": "sass-lint assets/sass/*.scss -v -q",
-    "eslint": "eslint assets/js/**"
+    "eslint": "eslint assets/js/**",
+    "zip": "bestzip Haven-$npm_package_version.zip assets/dist/* assets/images/* locales/* partials/* *.hbs LICENSE README.md screenshot.png",
+    "release": "npm run build && npm run zip"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-prismjs": "^1.0.2",
+    "bestzip": "^2.1.2",
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
