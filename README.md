@@ -1,8 +1,12 @@
 # Haven
 
-A Ghost theme. ***Work in Progress!***
+[![Travis (.org)](https://img.shields.io/travis/nehalist/Haven.svg)](https://travis-ci.org/nehalist/Haven)
+[![Github All Releases](https://img.shields.io/github/downloads/nehalist/Haven/total.svg)](https://github.com/nehalist/Haven/releases)
+[![GitHub](https://img.shields.io/github/license/nehalist/Haven.svg)](https://github.com/nehalist/Haven/blob/master/LICENSE)
 
-IMAGE
+A Ghost theme. ***Work in Progress***
+
+![haven](screenshot.png)
 
 ## Features
 
@@ -64,9 +68,11 @@ Open `assets/sass/_base.scss` and change everything to your needs.
 
 ### Post layout
 
-There are two different post styles available; a compact one and a more feature image centric one.
+There are two different post styles available for post previews; a compact one and a more feature image centric one.
 
-IMAGE
+| Compact | Non compact |
+| --- | --- |
+| ![compact_true](compact_true.png) | ![compact_false](compact_false.png) |
 
 To switch between these layouts set the `$compact-preview-layout` variable to `true/false` in `assets/_base.scss`.
 
