@@ -1,7 +1,7 @@
 {
   "name": "haven",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A Ghost theme",
   "main": "index.js",
   "scripts": {
     "gscan": "gscan .",
@@ -10,12 +10,12 @@
     "test": "npm run gscan && npm run sass-lint && npm run eslint",
     "sass-lint": "sass-lint assets/sass/*.scss -v -q",
     "eslint": "eslint assets/js/**",
-    "zip": "bestzip Haven-$npm_package_version.zip assets/dist/* assets/images/* locales/* partials/* *.hbs LICENSE README.md screenshot.png",
+    "zip": "bestzip Haven-$npm_package_version.zip assets/dist/* assets/images/* locales/* partials/* *.hbs LICENSE README.md screenshot.png package.json",
     "release": "npm run build && npm run zip"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nehalist/haven.git"
+    "url": "git+https://github.com/nehalist/Haven.git"
   },
   "keywords": [
     "ghost",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nehalist/haven/issues"
+    "url": "https://github.com/nehalist/Haven/issues"
   },
-  "homepage": "https://github.com/nehalist/haven#readme",
+  "homepage": "https://github.com/nehalist/Haven#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
