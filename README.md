@@ -18,7 +18,7 @@ A Ghost theme. ***Work in Progress***
 - Multiple post layouts (see [post layout](#post-layout))
 - [Syntax highlighting](#syntax-highlighting)
 
-*See [Customization](#customization) to disable optional features.*
+*See [Customization](#customization) to enable/disable optional features.*
 
 ## Installation
 
