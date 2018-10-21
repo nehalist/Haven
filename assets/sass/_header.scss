@@ -1,8 +1,9 @@
 @import 'base';
+@import '~bootstrap/scss/mixins';
 
 .header {
   align-items: center;
-  background: $header-background-color center;
+  background: $header-background-color no-repeat fixed center;
   background-size: cover;
   color: $header-font-color;
   display: flex;
@@ -10,6 +11,8 @@
   height: $header-height;
   justify-content: center;
   margin-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 56px;
   position: relative;
   text-align: center;
@@ -57,6 +60,7 @@
   &__author-bio {
     font-size: 1.3em;
     opacity: .7;
+    text-align: center;
   }
 
   &__author-image {
@@ -79,6 +83,15 @@
     &:hover {
       color: $white;
     }
+  }
+
+  &__social-links {
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-top: 5px;
+    }
+
+    display: inline;
   }
 
   &__tag-description {

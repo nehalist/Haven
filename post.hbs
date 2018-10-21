@@ -4,7 +4,7 @@
 
 <div class="container no-header content">
     <div class="row">
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-12 col-lg-8">
             <main id="content">
                 {{#post}}
                     <article class="post clearfix {{post_class}}">
@@ -37,7 +37,7 @@
 
                         <section class="post__author-container">
                             <div class="row d-flex align-items-center">
-                                <div class="col-6">
+                                <div class="col-md-6 col-sm-12">
                                     {{#has author="count:>1"}}
                                         <div class="post__authors">
                                             {{#foreach authors}}
@@ -46,7 +46,8 @@
                                                         <img class="post__author-profile-image" src="{{profile_image}}"
                                                              alt="{{name}}">
                                                     {{else}}
-                                                        <img class="post__author-profile-image" src="{{asset "images/unknown.png"}}"
+                                                        <img class="post__author-profile-image"
+                                                             src="{{asset "images/unknown.png"}}"
                                                              alt="{{name}}">
                                                     {{/if}}
                                                 </a>
@@ -60,7 +61,8 @@
                                                         <img class="post__author-profile-image" src="{{profile_image}}"
                                                              alt="{{name}}">
                                                     {{else}}
-                                                        <img class="post__author-profile-image" src="{{asset "images/unknown.png"}}"
+                                                        <img class="post__author-profile-image"
+                                                             src="{{asset "images/unknown.png"}}"
                                                              alt="{{name}}">
                                                     {{/if}}
 
@@ -77,17 +79,22 @@
                                         {{/primary_author}}
                                     {{/has}}
                                 </div>
-                                <div class="col post__share-links text-right">
+                                <div class="col-md-6 col-sm-12 post__share-links text-md-right text-sm-center">
                                     <span class="post__share-title">{{t "Share this post on"}}</span>
-                                    <a class="post__share-link post__share-link--twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                                    onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                                    <a class="post__share-link post__share-link--twitter"
+                                       href="https://twitter.com/share?text={{encode title}}&amp;url={{url
+                                    absolute="true"}}"
+                                    onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return
+                                    false;">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                                         </span>
                                     </a>
-                                    <a class="post__share-link post_share-link--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                                    onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                                    <a class="post__share-link post_share-link--facebook"
+                                       href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'share-facebook','width=580,height=296');return
+                                    false;">
                                         <span class="fa-stack fa-lg">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -105,7 +112,7 @@
                 {{/post}}
             </main>
         </div>
-        <div class="col-4 sidebar-container">
+        <div class="col-md-12 col-lg-4 sidebar-container">
             <aside id="sidebar">
                 {{> "sidebar" related_posts=true post_id=id primary_tag=primary_tag}}
             </aside>

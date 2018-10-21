@@ -1,10 +1,20 @@
 @import 'base';
+@import '~bootstrap/scss/mixins';
 
 .sidebar {
   font-size: .9em;
   line-height: 1.4em;
   padding-left: 25px;
   transition: top 1s;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-only(md) {
+    display: flex;
+  }
 
   &__widget {
     border-bottom: 1px $widget-border-color solid;
@@ -13,6 +23,15 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    @include media-breakpoint-only(md) {
+      min-width: 50%;
+      padding-left: 25px;
+
+      &:first-child {
+        padding-left: 0;
+      }
     }
   }
 
@@ -38,7 +57,7 @@
     display: block;
     font-size: 12px;
     font-weight: 600;
-    margin: 0 6px 6px;
+    margin: 0 2px 2px;
     padding: 6px 14px;
     text-align: center;
     transition: background-color .5s;

@@ -4,7 +4,7 @@
 
 <div class="container no-header content">
     <div class="row">
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-12 col-lg-8">
             <main id="content">
                 {{#post}}
                     <article class="post clearfix {{post_class}}">
@@ -36,7 +36,7 @@
                 {{/post}}
             </main>
         </div>
-        <div class="col-4 sidebar-container">
+        <div class="col-md-12 col-lg-4 sidebar-container">
             <aside id="sidebar">
                 {{> "sidebar" related_posts=true post_id=id primary_tag=primary_tag}}
             </aside>

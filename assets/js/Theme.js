@@ -6,7 +6,7 @@ export class Theme {
     this.$navbarToggler = $('.navbar-toggler');
     this.$logoContainer = $('.navigation__logo-container');
     this.$logo = $('.header__logo');
-    this.$blogTitle = $('.header__title');
+    this.$blogTitle = $('.blog-title');
     this.$sidebar = $('.sidebar');
 
     if (this.$sidebar.length) {
@@ -48,10 +48,6 @@ export class Theme {
   }
 
   logoSwapper() {
-    if (this.isMobile()) {
-      return;
-    }
-
     const scrollTop = this.$document.scrollTop();
     const $ref = this.$logo.length ? this.$logo : this.$blogTitle;
     const padding = (scrollTop > $ref.offset().top + $ref.height()) ? 0 : '30px';

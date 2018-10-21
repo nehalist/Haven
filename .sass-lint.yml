@@ -2,3 +2,4 @@ rules:
   class-name-format:
     - 1
     - convention: hyphenatedbem
+  mixins-before-declarations: 0

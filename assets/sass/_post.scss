@@ -1,4 +1,5 @@
 @import 'base';
+@import '~bootstrap/scss/mixins';
 
 .post {
   border-bottom: 1px solid $ultra-light-gray;
@@ -22,9 +23,13 @@
 
   &__title {
     font-size: 2em;
+
     font-stretch: 100%;
     font-weight: 700;
     margin-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.6em;
+    }
   }
 
   &__content-container {
@@ -41,10 +46,14 @@
 
   &__feature-image {
     background-color: $feature-image-background-color;
+
     background-position: center;
     background-size: cover;
     border-radius: $general-border-radius;
     transition: opacity 1s;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
 
     @if $compact-preview-layout {
       height: 135px;
@@ -62,6 +71,7 @@
   }
 
   &__feature-image--full-width {
+    display: block;
     height: 250px;
     margin: 25px 0 15px;
     width: 100%;
@@ -156,6 +166,10 @@
 
   &__share-links {
     padding-top: 3px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
   }
 
   &__share-title {
