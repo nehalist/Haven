@@ -8,6 +8,7 @@ export class Theme {
     this.$logo = $('.header__logo');
     this.$blogTitle = $('.blog-title');
     this.$sidebar = $('.sidebar');
+    this.$content = $('#content');
 
     if (this.$sidebar.length) {
       this.initialSidebarWidth = $('.sidebar-container').width();
@@ -61,7 +62,7 @@ export class Theme {
   }
 
   affixSidebar() {
-    if (this.$sidebar.height() >= this.$window.height()) {
+    if (this.$content.height() <= this.$sidebar.height() || this.$sidebar.height() >= this.$window.height()) {
       return;
     }
 
