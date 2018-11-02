@@ -1,6 +1,6 @@
 <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top {{^is "home"}}no-transparency{{/is}}">
     <div class="container">
-        <a class="navbar-brand d-block d-xs-none navigation__logo-container d-none d-sm-block d-lg-none {{#unless
+        <a class="navbar-brand d-block d-xs-none navigation__logo-container d-none d-sm-block d-lg-none text-left {{#unless
             @blog.logo}}navigation__logo-container--with-line-height{{/unless}}" href="{{@blog.url}}">
             {{#if @blog.logo}}
                 <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30"/>
@@ -26,7 +26,7 @@
                 {{/foreach}}
             </ul>
             <ul class="nav navbar-nav flex-fill justify-content-center d-none d-lg-block d-xl-block">
-                <li class="nav-item">
+                <li class="nav-item {{#if @blog.logo}}d-flex{{/if}}">
                     <a class="navbar-brand" href="{{@blog.url}}">
                         {{#if @blog.logo}}
                             <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
