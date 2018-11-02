@@ -24,7 +24,10 @@
     padding-top: 0 !important;
   }
 
+  // sass-lint:disable no-important
   .nav-link {
+    padding-left: 0 !important;
+    padding-right: 1em !important;
     transition: color 1s;
   }
 
