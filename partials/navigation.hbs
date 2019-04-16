@@ -1,11 +1,11 @@
 <nav class="navigation navbar navbar-expand-lg navbar-dark fixed-top {{^is "home"}}no-transparency{{/is}}">
     <div class="container">
         <a class="navbar-brand d-block d-xs-none navigation__logo-container d-none d-sm-block d-lg-none text-left {{#unless
-            @blog.logo}}navigation__logo-container--with-line-height{{/unless}}" href="{{@blog.url}}">
-            {{#if @blog.logo}}
-                <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30"/>
+            @site.logo}}navigation__logo-container--with-line-height{{/unless}}" href="{{@site.url}}">
+            {{#if @site.logo}}
+                <img class="navigation__logo" src="{{@site.logo}}" alt="{{@site.title}}" height="30"/>
             {{else}}
-                {{@blog.title}}
+                {{@site.title}}
             {{/if}}
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNavigation"
@@ -26,15 +26,15 @@
                 {{/foreach}}
             </ul>
             <ul class="nav navbar-nav flex-fill justify-content-center d-none d-lg-block d-xl-block">
-                <li class="nav-item {{#if @blog.logo}}d-flex{{/if}}">
-                    <a class="navbar-brand" href="{{@blog.url}}">
-                        {{#if @blog.logo}}
+                <li class="nav-item {{#if @site.logo}}d-flex{{/if}}">
+                    <a class="navbar-brand" href="{{@site.url}}">
+                        {{#if @site.logo}}
                             <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
-                                <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30"/>
+                                <img class="navigation__logo" src="{{@site.logo}}" alt="{{@site.title}}" height="30"/>
                             </div>
                         {{else}}
                             <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
-                                <span class="navigation__logo navigation__logo-text navbar-text">{{@blog.title}}</span>
+                                <span class="navigation__logo navigation__logo-text navbar-text">{{@site.title}}</span>
                             </div>
                         {{/if}}
                     </a>
@@ -43,12 +43,12 @@
             <ul class="nav navbar-nav flex-fill w-100 justify-content-lg-end navbar-icons">
                 <li class="nav-item"><a class="nav-link navigation__toggle-search-button" data-toggle="modal"
                                         data-target="#searchModal"><i class="fa fa-search fa-lg"></i></a></li>
-                {{#if @blog.facebook}}
-                    <li class="nav-item"><a href="{{facebook_url @blog.facebook}}" class="nav-link" target="_blank"><i
+                {{#if @site.facebook}}
+                    <li class="nav-item"><a href="{{facebook_url @site.facebook}}" class="nav-link" target="_blank"><i
                         class="fa fa-facebook fa-lg"></i></a></li>
                 {{/if}}
-                {{#if @blog.twitter}}
-                    <li class="nav-item"><a href="{{twitter_url @blog.twitter}}" class="nav-link" target="_blank"><i
+                {{#if @site.twitter}}
+                    <li class="nav-item"><a href="{{twitter_url @site.twitter}}" class="nav-link" target="_blank"><i
                         class="fa fa-twitter fa-lg"></i></a></li>
                 {{/if}}
             </ul>
