@@ -1,6 +1,6 @@
 {
   "name": "haven",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Ghost theme",
   "main": "index.js",
   "scripts": {
