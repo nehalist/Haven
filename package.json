@@ -33,19 +33,19 @@
   },
   "homepage": "https://github.com/nehalist/Haven#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.4",
     "babel-plugin-prismjs": "^1.0.2",
     "bestzip": "^2.1.2",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
-    "eslint": "^5.6.1",
+    "eslint": "^5.16.0",
     "file-loader": "^2.0.0",
-    "gscan": "^2.2.0",
+    "gscan": "^2.5.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
@@ -62,6 +62,9 @@
     "lunr": "^2.3.3",
     "popper.js": "^1.14.4",
     "prismjs": "^1.15.0"
+  },
+  "engines": {
+    "ghost-api": "v2"
   },
   "config": {
     "posts_per_page": 10

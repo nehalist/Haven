@@ -4,14 +4,14 @@
     <div class="container">
         <ul class="nav navbar-nav flex-fill justify-content-center d-none d-sm-block">
             <li class="nav-item text-center">
-                <a class="navbar-brand" href="{{@blog.url}}">
-                    {{#if @blog.logo}}
+                <a class="navbar-brand" href="{{@site.url}}">
+                    {{#if @site.logo}}
                         <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
-                            <img class="navigation__logo" src="{{@blog.logo}}" alt="{{@blog.title}}" height="30"/>
+                            <img class="navigation__logo" src="{{@site.logo}}" alt="{{@site.title}}" height="30"/>
                         </div>
                     {{else}}
                         <div class="navigation__logo-container {{^is "home"}}navigation--show-logo{{/is}}">
-                            <span class="navigation__logo navigation__logo-text navbar-text">{{@blog.title}}</span>
+                            <span class="navigation__logo navigation__logo-text navbar-text">{{@site.title}}</span>
                         </div>
                     {{/if}}
                 </a>
@@ -31,7 +31,7 @@
                 <small>{{code}} - {{message}}</small>
                 {{t "Whoops, you found a dead link."}}
             </h1>
-            <a href="{{@blog.url}}">{{t "Oh jeez! Take me back to a safer place!"}}</a>
+            <a href="{{@site.url}}">{{t "Oh jeez! Take me back to a safer place!"}}</a>
         </div>
     </div>
 </div>
