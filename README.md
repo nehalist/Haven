@@ -1,5 +1,7 @@
 # Haven
 
+> ***IMPORTANT***: Since I'm no longer using Ghost as a frontend this repository is unmaintained.
+
 [![Travis (.org)](https://img.shields.io/travis/nehalist/Haven.svg)](https://travis-ci.org/nehalist/Haven)
 [![Github All Releases](https://img.shields.io/github/downloads/nehalist/Haven/total.svg)](https://github.com/nehalist/Haven/releases)
 [![GitHub](https://img.shields.io/github/license/nehalist/Haven.svg)](https://github.com/nehalist/Haven/blob/master/LICENSE)
